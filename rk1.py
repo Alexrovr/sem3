@@ -1,5 +1,3 @@
-from operator import itemgetter
-
 class DataTable:
     def __init__(self, id, name, row_count, db_id):
         self.id = id
@@ -78,7 +76,7 @@ def main():
             d_rows_sum = sum(d_rows)
             res2_unsorted.append((d.name, d_rows_sum))
 
-    res2 = sorted(res2_unsorted, key=itemgetter(1), reverse=True)
+    res2 = sorted(res2_unsorted, key=lambda i: i[1], reverse=True)
     for i in res2:
         print(i[0] + ": " + str(i[1]) + " строк")
 
