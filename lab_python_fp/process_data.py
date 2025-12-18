@@ -7,9 +7,7 @@ from print_result import print_result
 from cm_timer import cm_timer_1
 
 
-path = sys.argv[1] if len(sys.argv) > 1 else "data_light.json"
-
-with open(path, encoding='utf-8') as f:
+with open("lab_python_fp/data_light.json", encoding='utf-8') as f:
     data = json.load(f)
 
 
